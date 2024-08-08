@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # CarServiceCenter
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.1.3.
@@ -26,6 +25,3 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
-=======
-# car-service-center
->>>>>>> 6d11f612046a11ab3d0284ea0a42e90dab764211
