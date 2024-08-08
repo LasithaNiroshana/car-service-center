@@ -1,0 +1,220 @@
+<!-- Container for Add Car Button -->
+<div class="flex justify-end mb-4">
+    <!-- Add Car Button -->
+    <button (click)="openAddCar()" class="bg-blue-700 hover:bg-blue-800 text-white font-bold py-2 px-4 rounded inline-flex items-center focus:outline-none focus:ring-4 focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
+            <path fill-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25ZM12.75 9a.75.75 0 0 0-1.5 0v2.25H9a.75.75 0 0 0 0 1.5h2.25V15a.75.75 0 0 0 1.5 0v-2.25H15a.75.75 0 0 0 0-1.5h-2.25V9Z" clip-rule="evenodd" />
+        </svg>     
+        <span>Add New Car</span>
+    </button>
+</div>
+
+<!-- Container for Search Bar -->
+<div class="mb-1">
+    <form class="max-w-md mx-auto">
+        <label for="default-search" class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Search</label>
+        <div class="relative">
+            <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
+                <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"/>
+                </svg>
+            </div>
+            <input type="search" id="default-search" class="block w-full p-4 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Search Vehicle" required />
+            <button type="submit" class="text-white absolute end-2.5 bottom-2.5 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Search</button>
+        </div>
+    </form>
+</div>
+  <!--Cars Table-->
+<br>
+<section class="container mx-auto p-6 font-mono h-full flex flex-col">
+    <div class="w-full h-full overflow-hidden rounded-lg shadow-lg flex-grow">
+        <div class="w-full overflow-x-auto">
+            <table class="w-full">
+                <thead>
+                    <tr class="text-md font-semibold tracking-wide text-left text-gray-900 bg-gray-100 uppercase border-b border-gray-600 dark:border-gray-700 dark:text-white dark:bg-gray-800">
+                        <th class="px-4 py-3">Vehicle No.</th>
+                        <th class="px-4 py-3">Registered Date</th>
+                        <th class="px-4 py-3">Customer</th>
+                        <th class="px-4 py-3">Latest Job</th>
+                        <th class="px-4 py-3">Job Status</th>
+                        <th class="px-4 py-3">Service History</th>
+                        <th class="px-4 py-3">More Car Details</th>
+                    </tr>
+                </thead>
+                <tbody class="bg-white dark:bg-gray-800">
+                    <tr>
+                        <td class="px-4 py-4 text-sm font-medium text-gray-700 dark:text-gray-200 whitespace-nowrap">
+                            <div class="inline-flex items-center gap-x-3">
+                                <input type="checkbox" class="text-blue-500 border-gray-300 rounded dark:bg-gray-900 dark:ring-offset-gray-900 dark:border-gray-700">
+                                <span>#3066</span>
+                            </div>
+                        </td>
+                        <td class="px-4 py-4 text-sm text-gray-500 dark:text-gray-300 whitespace-nowrap">Jan 6, 2022</td>
+                        <td class="px-4 py-4 text-sm text-gray-500 dark:text-gray-300 whitespace-nowrap">
+                            <div class="flex items-center gap-x-2">
+                                <img class="object-cover w-8 h-8 rounded-full" src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1180&q=80" alt="">
+                                <div>
+                                    <h2 class="text-sm font-medium text-gray-800 dark:text-white ">Nimal</h2>
+                                    <p class="text-xs font-normal text-gray-600 dark:text-gray-400">0771283468</p>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="px-4 py-4 text-sm text-gray-500 dark:text-gray-300 whitespace-nowrap">Full Service</td>
+                        <td class="px-4 py-4 text-sm font-medium text-gray-700 whitespace-nowrap">
+                            <div class="inline-flex items-center px-3 py-1 rounded-full gap-x-2 text-gray-500 bg-gray-100 dark:bg-gray-800">
+                                <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M6 2.5V6L8.5 8.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                                <h2 class="text-sm font-normal">In Progress</h2>
+                            </div>
+                        </td>
+                        <td class="px-4 py-4 text-sm whitespace-nowrap">
+                            <div class="flex items-center gap-x-6">
+                                <button (click)="openModal()" class="text-blue-500 transition-colors duration-200 hover:text-indigo-500 focus:outline-none">
+                                    View
+                                  </button>
+                            </div>
+                        </td>
+                        <td class="px-4 py-4 text-sm whitespace-nowrap">
+                            <div class="flex items-center gap-x-6">
+                                <button class="text-blue-500 transition-colors duration-200 hover:text-indigo-500 focus:outline-none">
+                                    View
+                                  </button>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="px-4 py-4 text-sm font-medium text-gray-700 dark:text-gray-200 whitespace-nowrap">
+                            <div class="inline-flex items-center gap-x-3">
+                                <input type="checkbox" class="text-blue-500 border-gray-300 rounded dark:bg-gray-900 dark:ring-offset-gray-900 dark:border-gray-700">
+                                <span>#3065</span>
+                            </div>
+                        </td>
+                        <td class="px-4 py-4 text-sm text-gray-500 dark:text-gray-300 whitespace-nowrap">Jan 6, 2022</td>
+                        <td class="px-4 py-4 text-sm text-gray-500 dark:text-gray-300 whitespace-nowrap">
+                            <div class="flex items-center gap-x-2">
+                                <img class="object-cover w-8 h-8 rounded-full" src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80" alt="">
+                                <div>
+                                    <h2 class="text-sm font-medium text-gray-800 dark:text-white ">Sunil</h2>
+                                    <p class="text-xs font-normal text-gray-600 dark:text-gray-400">0714229248</p>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="px-4 py-4 text-sm text-gray-500 dark:text-gray-300 whitespace-nowrap">Body Wash</td>
+                        <td class="px-4 py-4 text-sm font-medium text-gray-700 whitespace-nowrap">
+                            <div class="inline-flex items-center px-3 py-1 rounded-full gap-x-2 text-emerald-500 bg-emerald-100/60 dark:bg-gray-800">
+                                <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M10 3L4.5 8.5L2 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                                <h2 class="text-sm font-normal">Complete</h2>
+                            </div>
+                        </td>
+                        <td class="px-4 py-4 text-sm whitespace-nowrap">
+                            <div class="flex items-center gap-x-6">
+                                <button (click)="openModal()" class="text-blue-500 transition-colors duration-200 hover:text-indigo-500 focus:outline-none">
+                                    View
+                                  </button>
+                            </div>
+                        </td>
+                        <td class="px-4 py-4 text-sm whitespace-nowrap">
+                            <div class="flex items-center gap-x-6">
+                                <button class="text-blue-500 transition-colors duration-200 hover:text-indigo-500 focus:outline-none">
+                                    View
+                                  </button>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="px-4 py-4 text-sm font-medium text-gray-700 dark:text-gray-200 whitespace-nowrap">
+                            <div class="inline-flex items-center gap-x-3">
+                                <input type="checkbox" class="text-blue-500 border-gray-300 rounded dark:bg-gray-900 dark:ring-offset-gray-900 dark:border-gray-700">
+                                <span>#3064</span>
+                            </div>
+                        </td>
+                        <td class="px-4 py-4 text-sm text-gray-500 dark:text-gray-300 whitespace-nowrap">Jan 6, 2022</td>
+                        <td class="px-4 py-4 text-sm text-gray-500 dark:text-gray-300 whitespace-nowrap">
+                            <div class="flex items-center gap-x-2">
+                                <img class="object-cover w-8 h-8 rounded-full" src="" alt="">
+                                <div>
+                                    <h2 class="text-sm font-medium text-gray-800 dark:text-white ">Siril</h2>
+                                    <p class="text-xs font-normal text-gray-600 dark:text-gray-400">0765524848</p>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="px-4 py-4 text-sm text-gray-500 dark:text-gray-300 whitespace-nowrap">Interior Cleanup</td>
+                        <td class="px-4 py-4 text-sm font-medium text-gray-700 whitespace-nowrap">
+                            <div class="inline-flex items-center px-3 py-1 rounded-full gap-x-2 text-gray-500 bg-gray-100 dark:bg-gray-800">
+                                <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M6 2.5V6L8.5 8.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                                <h2 class="text-sm font-normal">In Progress</h2>
+                            </div>
+                        </td>
+                        <td class="px-4 py-4 text-sm whitespace-nowrap">
+                            <div class="flex items-center gap-x-6">
+                                <button (click)="openModal()" class="text-blue-500 transition-colors duration-200 hover:text-indigo-500 focus:outline-none">
+                                    View
+                                  </button>
+                            </div>
+                        </td>
+                        <td class="px-4 py-4 text-sm whitespace-nowrap">
+                            <div class="flex items-center gap-x-6">
+                                <button class="text-blue-500 transition-colors duration-200 hover:text-indigo-500 focus:outline-none">
+                                    View
+                                  </button>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="flex items-center justify-between mt-6">
+            <button class="flex items-center justify-center w-1/2 px-5 py-2 text-sm text-gray-700 transition-colors duration-200 bg-white border rounded-lg dark:text-gray-200 gap-x-2 sm:w-auto dark:bg-gray-900 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M15 8a.5.5 0 0 1-.5.5H2.707l3.147 3.146a.5.5 0 0 1-.708.708l-4-4a.5.5 0 0 1 0-.708l4-4a.5.5 0 0 1 .708.708L2.707 7.5H14.5A.5.5 0 0 1 15 8z" />
+                </svg>
+                <span>
+                    Previous
+                </span>
+            </button>
+
+            <div class="items-center hidden lg:flex gap-x-3">
+                <button class="px-2 py-1 text-sm text-blue-500 rounded-md hover:underline focus:outline-none">
+                    1
+                </button>
+                <button class="px-2 py-1 text-sm text-gray-500 rounded-md hover:underline focus:outline-none dark:text-gray-300">
+                    2
+                </button>
+                <button class="px-2 py-1 text-sm text-gray-500 rounded-md hover:underline focus:outline-none dark:text-gray-300">
+                    3
+                </button>
+                <button class="px-2 py-1 text-sm text-gray-500 rounded-md hover:underline focus:outline-none dark:text-gray-300">
+                    ...
+                </button>
+                <button class="px-2 py-1 text-sm text-gray-500 rounded-md hover:underline focus:outline-none dark:text-gray-300">
+                    12
+                </button>
+                <button class="px-2 py-1 text-sm text-gray-500 rounded-md hover:underline focus:outline-none dark:text-gray-300">
+                    13
+                </button>
+                <button class="px-2 py-1 text-sm text-gray-500 rounded-md hover:underline focus:outline-none dark:text-gray-300">
+                    14
+                </button>
+            </div>
+
+            <button class="flex items-center justify-center w-1/2 px-5 py-2 text-sm text-gray-700 transition-colors duration-200 bg-white border rounded-lg dark:text-gray-200 gap-x-2 sm:w-auto dark:bg-gray-900 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800">
+                <span>
+                    Next
+                </span>
+
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M1 8a.5.5 0 0 0 .5.5h11.793l-3.147 3.146a.5.5 0 0 0 .708.708l4-4a.5.5 0 0 0 0-.708l-4-4a.5.5 0 1 0-.708.708L13.293 7.5H1.5A.5.5 0 0 0 1 8z" />
+                </svg>
+            </button>
+        </div>
+    </div>
+</section>
+
+<!-- Modal Component -->
+<app-show-history [isOpen]="isModalOpen" [jobs]="jobs" (close)="isModalOpen = false"></app-show-history>
+<!-- <app-add-car [isOpen]="isAddCarModalOpen" (close)="isAddCarModalOpen = false"></app-add-car> -->

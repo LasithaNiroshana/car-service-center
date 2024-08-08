@@ -1,0 +1,25 @@
+<!-- Modal Background -->
+<div *ngIf="isOpen" class="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50">
+    <!-- Modal Content -->
+    <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg">
+      <div class="text-lg font-semibold mb-4 text-gray-500 dark:text-gray-400">Service History</div>
+      <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
+        <thead class="bg-gray-50 dark:bg-gray-800">
+          <tr>
+            <th class="px-4 py-2 text-left text-sm font-medium text-gray-500 dark:text-gray-400">Job</th>
+            <th class="px-4 py-2 text-left text-sm font-medium text-gray-500 dark:text-gray-400">Date</th>
+          </tr>
+        </thead>
+        <tbody class="bg-white dark:bg-gray-900">
+          <tr *ngFor="let item of jobs">
+            <td class="px-4 py-2 text-sm text-gray-500 dark:text-gray-300">{{ item.job }}</td>
+            <td class="px-4 py-2 text-sm text-gray-500 dark:text-gray-300">{{ item.date }}</td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="mt-4 flex justify-end">
+        <button (click)="close()" class="px-4 py-2 text-white bg-blue-500 hover:bg-blue-600 rounded">Close</button>
+      </div>
+    </div>
+  </div>
+  
